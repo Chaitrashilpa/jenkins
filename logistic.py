@@ -14,18 +14,18 @@ seed = 7
 
 X_train, X_test, Y_train, Y_test = model_selection.train_test_split(X, Y, test_size=test_size, random_state=seed)
 
-# Fit the model on training set
+
 print("Creating Logistic Regression Model ..")
 model = LogisticRegression()
 print("Training Model ..")
 model.fit(X_train, Y_train)
-# save the model to disk
+
 print("Saving Model ..")
 filename = 'logistic.sav'
 joblib.dump(model, filename)
 print("Model Saved ..")
 
-# load the model from disk
+
 print("Loading Saved Model ..")
 loaded_model = joblib.load(filename)
 result = loaded_model.score(X_test, Y_test)
