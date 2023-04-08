@@ -1,4 +1,4 @@
-FROM python:3.8-slim-buster 
+FROM python:3.11.2-slim-buster 
 WORKDIR /Desktop/jenkins-docker
 COPY . . 
 RUN pip install -r requirements.txt
